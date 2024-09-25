@@ -28,32 +28,28 @@ def resultadoPartido():
     equipoLocalEncontrado[6] += golesEquipoLocal  # Goles a favor
     equipoLocalEncontrado[7] += golesEquipoVisit  # Goles en contra
 
-    if golesEquipoLocal > golesEquipoVisit:
-        equipoLocalEncontrado[3] += 1
-        equipoLocalEncontrado[8] += 3
-        ix.funct.menuPrincipal()
-    elif golesEquipoLocal == golesEquipoVisit:
-        equipoLocalEncontrado[5] += 1
-        equipoLocalEncontrado[8] += 1
-        ix.funct.menuPrincipal()
-    else:
-        equipoLocalEncontrado[4] += 1
-        ix.funct.menuPrincipal()
-
     equipoVisitEncontrado[2] += 1
     equipoVisitEncontrado[6] += golesEquipoVisit
     equipoVisitEncontrado[7] += golesEquipoLocal
 
-    if golesEquipoVisit > golesEquipoLocal:
-        equipoVisitEncontrado[3] += 1 
-        equipoVisitEncontrado[8] += 3
+    if golesEquipoLocal > golesEquipoVisit:
+        equipoLocalEncontrado[3] += 1
+        equipoLocalEncontrado[8] += 3
+        equipoVisitEncontrado[4] += 1
+        
         ix.funct.menuPrincipal()
-    elif golesEquipoVisit == golesEquipoLocal:
+    elif golesEquipoLocal == golesEquipoVisit:
+        equipoLocalEncontrado[5] += 1
+        equipoLocalEncontrado[8] += 1
         equipoVisitEncontrado[5] += 1 
         equipoVisitEncontrado[8] += 1
+        
         ix.funct.menuPrincipal()
     else:
-        equipoVisitEncontrado[4] += 1
+        equipoLocalEncontrado[4] += 1
+        equipoVisitEncontrado[3] += 1 
+        equipoVisitEncontrado[8] += 3
+        
         ix.funct.menuPrincipal()
 
 def imprimirEquipoConMasPuntos():
