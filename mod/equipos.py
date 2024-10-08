@@ -2,7 +2,7 @@ import index as ix
 def crearEquipo():
     equipoNombre = str(input(ix.msg.menuAddEquipo))
     ix.os.system('cls')
-    print(ix.msg.menuDelEquipo)
+    print(ix.msg.menuDelEquipo
     jugadores=int(input())
     for i in range(0, jugadores):
         i+=1
